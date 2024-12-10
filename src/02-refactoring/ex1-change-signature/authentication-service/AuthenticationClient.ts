@@ -1,5 +1,4 @@
 import { AuthenticationService } from "./AuthenticationService"
-import { Id } from "./Id";
 
 export class AuthenticatorClient {
     private authenticationService: AuthenticationService
@@ -13,7 +12,7 @@ export class AuthenticatorClient {
     }
 
     public run(): void {
-        const authenticated = this.authenticationService.isAuthenticated(Id.from(33))
+        const authenticated = this.authenticationService.isAuthenticated(33)
         console.log("33 is authenticated = " + authenticated)
     }
 }
